@@ -52,8 +52,11 @@ class Relationgraph extends Base
                 'id' => $task['id'],
                 'title' => $task['title'],
                 'active' => $task['is_active'],
+                'project_id' => $task['project_id'],
                 'project' => $task['project_name'],
                 'score'=> $task['score'],
+                'column' => $task['column_title'],
+                'priority' => $task['priority'],
                 'assignee' => $task['assignee_username']
             ];
         }

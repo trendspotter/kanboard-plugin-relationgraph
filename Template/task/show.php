@@ -12,6 +12,23 @@
     <?php $items = []; ?>
     <?php foreach ($graph['nodes'] as $node) : ?>
         <?php
+        $titleItems = [];
+
+        if ($node['project_id'] != $task['project_id']) {
+            $titleItems[] = 'Project: ' . $node['project'];
+        }
+
+        if ($node['score'] > 0) {
+            $titleItems[] = 'Score: ' . $node['score'];
+        }
+
+        if ($node['assignee'] != '') {
+            $titleItems[] = 'Assignee: ' . $node['assignee'];
+        }
+
+        $titleItems[] = 'Priority: ' . $node['priority'];
+        $titleItems[] = 'Column: ' . $node['column'];
+
         $items[] = [
             'id' => $node['id'],
             'label' => '#' . $node['id'] . ' ' . $node['title'],
@@ -24,7 +41,7 @@
             ],
             'shadow' => 'true',
             'mass' => 2,
-            'title' => $node['project'] . '<br>Score: ' . $node['score'] . '<br>Assignee: ' . $node['assignee']
+            'title' => join('<br>', $titleItems)
         ];
         ?>
     <?php endforeach ?>

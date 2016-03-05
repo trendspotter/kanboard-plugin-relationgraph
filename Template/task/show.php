@@ -56,7 +56,7 @@
             $items[] = [
                 'from' => $task,
                 'to' => $edge,
-                'label' => $type,
+                'label' => t($type),
                 'length' => 200,
                 'font' => ['align' => 'top'],
                 'arrows' => 'to'

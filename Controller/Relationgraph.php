@@ -18,7 +18,8 @@ class Relationgraph extends Base
                 [
                     'title' => $task['title'],
                     'task' => $task,
-                    'graph' => $graph
+                    'graph' => $graph,
+                    'project' => $this->project->getById($task['project_id'])
                 ]
             )
         );

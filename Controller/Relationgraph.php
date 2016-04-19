@@ -58,7 +58,8 @@ class Relationgraph extends Base
                 'score'=> $task['score'],
                 'column' => $task['column_title'],
                 'priority' => $task['priority'],
-                'assignee' => $task['assignee_username']
+                'assignee' => $task['assignee_name'] ?: $task['assignee_username'],
+                'color' => $this->color->getColorProperties($task['color_id'])
             ];
         }
 

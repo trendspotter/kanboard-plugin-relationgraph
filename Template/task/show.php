@@ -32,9 +32,11 @@
         $items[] = [
             'id' => $node['id'],
             'label' => '#' . $node['id'] . ' ' . $node['title'],
-            'color' => $node['active'] ? '#DDE8D3' : '#e8d3d3',
+            'color' => $node['color'],
             'shape' => 'box',
             'size' => '20',
+            'shapeProperties' => $node['active'] ? array('borderDashes' => array()) : array('borderDashes' => array(5, 5)),
+            'font' => array('color' => $node['active'] ? 'black' : 'gray'),
             'scaling' => [
                 'min' => 30,
                 'max' => 30

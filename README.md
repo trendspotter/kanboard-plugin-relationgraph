@@ -23,4 +23,9 @@ Installation
 or
 
 - Create a folder **plugins/Relationgraph**
-- Copy all files under this directory
+- Copy all files under this directory 
+
+Example
+-------
+
+![Relation graph sample](https://cloud.githubusercontent.com/assets/176446/10157859/1c8a0e88-668e-11e5-8067-b7003537ef71.png)

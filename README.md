@@ -9,6 +9,12 @@ Author
 - Xavier Vidal <xavividal@gmail.com>
 - License MIT
 
+Requirements
+------------
+
+- Kanboard >= 1.0.30
+- PHP >= 5.3.3
+
 Installation
 ------------
 

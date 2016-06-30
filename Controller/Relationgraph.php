@@ -71,7 +71,7 @@ class Relationgraph extends BaseController
 
                     $this->traverseGraph(
                         $graph,
-                        $this->taskFinder->getDetails($link['task_id'])
+                        $this->taskFinderModel->getDetails($link['task_id'])
                     );
                 }
             }

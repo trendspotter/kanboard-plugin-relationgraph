@@ -35,6 +35,6 @@ class Plugin extends Base
 
     public function getPluginHomepage()
     {
-        return 'xavividal/kanboard-plugin-relation-graph';
+        return 'xavividal/kanboard-plugin-relationgraph';
     }
 }

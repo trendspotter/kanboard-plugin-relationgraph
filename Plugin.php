@@ -3,6 +3,7 @@
 namespace Kanboard\Plugin\Relationgraph;
 
 use Kanboard\Core\Plugin\Base;
+use Kanboard\Core\Translator;
 
 class Plugin extends Base
 {
@@ -30,11 +31,16 @@ class Plugin extends Base
 
     public function getPluginDescription()
     {
-        return 'Show relations between tasks using a graph';
+        return t('Show relations between tasks using a graph');
     }
 
     public function getPluginHomepage()
     {
         return 'https://github.com/xavividal/kanboard-plugin-relationgraph';
+    }
+
+    public function onStartup()
+    {
+        Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
     }
 }

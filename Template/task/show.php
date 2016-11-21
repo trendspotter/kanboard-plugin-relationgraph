@@ -19,19 +19,19 @@
         $titleItems = [];
 
         if ($node['project_id'] != $task['project_id']) {
-            $titleItems[] = 'Project: ' . $node['project'];
+            $titleItems[] = t('Project: ') . $node['project'];
         }
 
         if ($node['score'] > 0) {
-            $titleItems[] = 'Score: ' . $node['score'];
+            $titleItems[] = t('Score: ') . $node['score'];
         }
 
         if ($node['assignee'] != '') {
-            $titleItems[] = 'Assignee: ' . $node['assignee'];
+            $titleItems[] = t('Assignee: ') . $node['assignee'];
         }
 
-        $titleItems[] = 'Priority: ' . $node['priority'];
-        $titleItems[] = 'Column: ' . $node['column'];
+        $titleItems[] = t('Priority: ') . $node['priority'];
+        $titleItems[] = t('Column: ') . $node['column'];
 
         $items[] = [
             'id' => $node['id'],

@@ -7,7 +7,7 @@
 <li class="<?= $active ? 'active' : '' ?>">
     <i class="fa fa-rotate-left fa-fw"></i>
     <?= $this->url->link(
-        'Relation graph',
+        t('Relation graph'),
         'relationgraph',
         'show',
         ['plugin' => 'relationgraph', 'task_id' => $task['id']]
